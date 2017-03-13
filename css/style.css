@@ -1,0 +1,140 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+body {
+  font-size: 16px;
+  color: #4d4f4f;
+  background: #fff;
+  font-family: Arial;
+}
+.loading-bro {
+  position: relative;
+  overflow: hidden;
+  margin: 60px auto 30px auto;
+  width: 150px;
+  text-align: center;
+}
+.loading-bro .svg-container {
+  position: relative;
+}
+.loading-bro #loading-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  margin-top: -0.75em;
+  font-size: 3em;
+  color: #24dc89;
+}
+.loading-bro .loading-condition-text {
+  font-size: 1em;
+  position: absolute;
+  bottom: 0em;
+  height: 3.2em;
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+  line-height: 85%;
+  left: 25%;
+}
+#load {
+  width: 150px;
+}
+#load #loading-inner {
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+  stroke-width: 10;
+  transform-origin: 50%;
+  stroke-linecap: round;
+  stroke: #24dc89;
+  fill: transparent;
+  transform: rotate(-85deg);
+}
+#load #loading-background {
+  stroke: #f4f4f5;
+  stroke-width: 9;
+  fill: transparent;
+}
+#load #loading-sucess {
+  stroke: #24dc89;
+  stroke-width: 12;
+  stroke-linecap: .5em;
+}
+#load .sucesstransition {
+  transition: all .5s;
+}
+#load .loading-sucess-begin {
+  stroke-dashoffset: 100;
+  stroke-dasharray: 100;
+}
+#load .loading-sucess-complete {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 100;
+}
+#load #loading-failed {
+  stroke: #f17a2f;
+  stroke-width: 12;
+  stroke-linecap: .5em;
+  transition: all 0s;
+  transform-origin: 50%;
+}
+#load .loading-failed-begin {
+  stroke-dashoffset: 100;
+  stroke-dasharray: 100;
+}
+#load .loading-failed-conplete {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 100;
+}
+.scaleobj {
+  animation: scaleobj .3s 1;
+}
+.error {
+  transition: all .3s;
+  stroke: #f17a2f !important;
+  color: #f17a2f !important;
+}
+/*@keyframes loadingcircle {
+  0% {
+    stroke-dashoffset: 100
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}*/
+@keyframes scaleobj {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.buttongroup {
+  text-align: center;
+}
+.sucessbutton {
+  margin-bottom: 1em;
+  background: #f4f4f5;
+  border-radius: .3em;
+  height: 2.5em;
+  width: 6.5em;
+  line-height: 2.5em;
+  border: 1px solid #d9d9dd;
+  color: #575760;
+}
+.failedbutton {
+  margin-bottom: 1em;
+  background: #f4f4f5;
+  border-radius: .3em;
+  height: 2.5em;
+  width: 6.5em;
+  line-height: 2.5em;
+  border: 1px solid #d9d9dd;
+  color: #575760;
+}
